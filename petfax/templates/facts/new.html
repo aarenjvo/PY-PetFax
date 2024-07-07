@@ -1,0 +1,69 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facts</title>
+</head>
+
+<body>
+    <h1>Submit Fax</h1>
+    <p>If you have some fun animal facts you'd like to share, please submit them! We may use them in the future.</p>
+    <form action="{{ url_for('fact.submit_fact')}}" method="post">
+        <label for="name">
+            <h2>Name: </h2>
+        </label>
+        <input type="text" id="name" name="name">
+
+        <label for="fact">
+            <h2>Fact: </h2>
+         </label>
+        <input type="text" id="fact" name="fact">
+        <br>
+        <br>
+        <button type="submit" onclick="alert('Fact submitted!')">Submit the Fact</button>
+    </form>
+
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetFax | Submit Facts</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <H1>Submit Fax</H1>
+        <div class="callout">
+            If you have some fun animal facts you'd like to share, please submit them! We may use them in the future.
+        </div>
+        <div class="facts-container">
+            <form action="/facts" method="POST">
+                <label for="submitter">
+                    <H2>Name</H2>
+                </label>
+                <input name="submitter" type="text">
+                <br />
+                <label for="fact">
+                    <H2>Fact</H2>
+                </label>
+                <textarea name="fact"></textarea>
+                <br />
+                <input type="submit" value="Submit the Fact">
+            </form>
+        </div>
+        <a href="/pets">⟨　Go back</a>
+    </div>
+</body>
+
+</html>
